@@ -1,0 +1,52 @@
+@import '../../styles.scss';
+
+.background-container {
+    
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+
+    .background {
+
+        width: 100%;
+    }
+
+}
+
+.toplevel-container {
+    background: linear-gradient(90deg, rgba(71, 71, 71, 0.494) 0%, rgba(51, 51, 51, 0.551) 0%, rgba(255,255,255,0) 100%);
+
+    padding: 0rem 3rem 0rem 3rem;
+    position: absolute;
+    float: left;
+    max-width: 20vw;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    h1 {
+        color: $text-light;
+    }
+
+}
+
+.legal {
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+
+    article {
+        padding: 2rem;
+    }
+}
+
+.card {
+    hyphens: auto;
+    text-align: justify;
+}
