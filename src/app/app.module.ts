@@ -3,14 +3,36 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProjectsComponent } from './projects/projects.component';
+import { HomeComponent } from './home/home.component';
+import { BusinessComponent } from './business/business.component';
+import { StudentsComponent } from './students/students.component';
+import { AboutComponent } from './about/about.component';
+import { LegalComponent } from './legal/legal.component';
+import { FloatingBtnComponent } from './floating-btn/floating-btn.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavigationComponent,
+    ProjectsComponent,
+    HomeComponent,
+    BusinessComponent,
+    StudentsComponent,
+    AboutComponent,
+    LegalComponent,
+    FloatingBtnComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

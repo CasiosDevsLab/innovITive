@@ -1,0 +1,21 @@
+<div class="background-container">
+    <div class="toplevel-container">
+        <h1>Anfragen</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,
+            magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna</p>
+        <button  class="primary-btn">Jetzt anfragen</button>
+    </div>
+
+    <img class="background" src="./assets/imgs/home-background.jpg" alt="elbphilharmonie hamburg">
+
+</div>
+
+
+
+<section>
+    <article *ngFor="let article of articles">
+        <h3>{{article.header}}</h3>
+        <p>{{article.description}}</p>
+        <button (click)='navigateTo(article.path)' class="secondary-btn">{{article.cta}}</button>
+    </article>
+</section>
