@@ -2,28 +2,30 @@
     <div class="toplevel-container">
         <h1>Datenschutz & Impressum </h1>
     </div>
-
-    <img class="background" src="./assets/imgs/legal-background.jpg" alt="elbphilharmonie hamburg">
+    
+    <div id="home-skeleton" class="background loading"></div>
+    <img class="background" src="./assets/imgs/legal-background.jpg" alt="elbphilharmonie hamburg" (load)="removeLoading()">
 
 </div>
 
 
 <section class="legal">
     <article>
-        <h2>Datenschutz</h2>
-        <div class="card" *ngFor="let input of inputs">
-            <b>{{input.header}}</b>
-            <p>{{input.value}}</p>
+        <h2>Impressum</h2>
+        <div class="card" *ngFor="let content of impressum.contents">
+            <b>{{content.header}}</b>
+            <p>{{content.value}}</p>
         </div>
     </article>
     <article>
-        <h2>Impressum</h2>
-        <h3>Academy Consult München e.V.</h3>
-        <p>Leopoldstraße 62</p>
-        <p>D-80802 München</p>
-        <p>fon: +49 89 381686580</p>
-        <p>E-Mail: kontakt@academyconsult.de</p>
-        <p>Internet: https://www.academyconsult.de</p>
-    </article>
+        <h2>{{impressum.name}}</h2>
+        <b>{{impressum.basedOn}}</b>
 
+        <p>{{impressum.adresse.strasse}}</p>
+        <p>{{impressum.adresse.plz}}, {{impressum.adresse.ort}}</p>
+        <p>{{impressum.adresse.land}}</p>
+    
+        <p>E-Mail: {{impressum.mail}}</p>
+        <p>Internet: https://innovITve.de</p>
+    </article>
 </section>
