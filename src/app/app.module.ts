@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
 import { BusinessComponent } from './business/business.component';
@@ -33,8 +32,7 @@ import { SurveyComponent } from './survey/survey.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
