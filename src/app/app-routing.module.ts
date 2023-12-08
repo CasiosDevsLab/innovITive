@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { StudentsComponent } from './students/students.component';
 import { BusinessComponent } from './business/business.component';
 import { LegalComponent } from './legal/legal.component';
+import { SurveyComponent } from './survey/survey.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,12 +15,15 @@ const routes: Routes = [
   { path: 'students', component: StudentsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'legal', component: LegalComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'survey', component: SurveyComponent },
+  { path: '', redirectTo: '/survey', pathMatch: 'full'},
   {path: '**', redirectTo: '/home'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'top'
+ })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

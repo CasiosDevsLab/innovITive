@@ -9,7 +9,7 @@
     position: relative;
 
     .background {
-
+        height: auto;
         width: 100%;
     }
 
@@ -44,9 +44,22 @@
     article {
         padding: 2rem;
     }
+
+    h2 {
+        color: $primary-light;
+    }
 }
 
 .card {
     hyphens: auto;
     text-align: justify;
+}
+
+
+@media screen and (max-width: $mobile) {
+
+    .legal {
+        grid-template-columns: 100fr;
+    }
+
 }

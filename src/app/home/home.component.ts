@@ -37,4 +37,10 @@ export class HomeComponent {
     this.router.navigateByUrl(path)
   }
 
+  removeLoading() {
+    let div = document.querySelector('#home-skeleton');
+    div?.classList.remove("loading")
+    div?.classList.remove("background")
+  }
+
 }

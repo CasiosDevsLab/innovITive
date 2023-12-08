@@ -14,6 +14,7 @@ import { StudentsComponent } from './students/students.component';
 import { AboutComponent } from './about/about.component';
 import { LegalComponent } from './legal/legal.component';
 import { FloatingBtnComponent } from './floating-btn/floating-btn.component';
+import { SurveyComponent } from './survey/survey.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FloatingBtnComponent } from './floating-btn/floating-btn.component';
     StudentsComponent,
     AboutComponent,
     LegalComponent,
-    FloatingBtnComponent
+    FloatingBtnComponent,
+    SurveyComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
+@import '../../styles.scss';
+
 img {
-    height: 2rem;
+    height: 3rem;
     padding: 1rem;
 }
 
@@ -14,13 +16,23 @@ header {
 
     align-items: center;
 
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-    background-color: rgba(255, 255, 255, 0.804);
+    background-color: rgba(255, 255, 255, 0.905);
 
     app-navigation {
-        &:last-child{
+        &:last-child {
             right: 0px;
         }
     }
+}
+
+@media screen and (max-width: $mobile) {
+
+    header {
+        overflow: hidden;
+    }
+
 }
