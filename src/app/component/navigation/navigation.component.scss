@@ -1,7 +1,9 @@
-@import '../../styles.scss';
+@import './../../../styles.scss';
+
+
 
 nav {
-    display: flex;
+    display: none;
     flex-flow: row nowrap;
 
     list-style-type: none;

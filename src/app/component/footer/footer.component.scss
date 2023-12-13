@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import './../../../styles.scss';
 
 footer {
     display: flex;
@@ -6,11 +6,11 @@ footer {
 
     justify-content: center;
 
-    background-color: rgb(55, 55, 55);
+    background-color: rgb(255, 255, 255);
 
     a {
         padding: 3rem;
-        color: $text-light;
+        color: $text-dark;
         text-decoration: none;
     }
     

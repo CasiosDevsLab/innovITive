@@ -1,0 +1,21 @@
+.wrapper {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr 1fr;
+
+    justify-items: center;
+
+    align-items: center;
+
+    .profileimage {
+        width: 300px;
+        height: auto;
+
+        border-radius: 50%;
+
+        background: linear-gradient(45deg, #E5D5FF, #D6F0FF, #D2ECFF);
+    }
+
+
+}
