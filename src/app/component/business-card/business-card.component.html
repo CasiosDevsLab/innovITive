@@ -1,0 +1,26 @@
+<div class="wrapper">
+
+    <h1 id="name">
+        {{consultant.firstname}} {{consultant.lastname}}
+    </h1>
+
+    <img src="../../../assets/imgs/{{consultant.img}}" class="profileimage">
+
+    <h3>Kontakt</h3>
+   
+    <div class="mail">
+        <a href="mailto:{{consultant.contact.mail}}"> {{consultant.contact.mail}} </a>
+    </div>
+
+    <div class="mobile">
+        {{consultant.contact.mobile}}
+    </div>
+
+    <div class="linkedIn">
+        <a href="{{consultant.contact.linkedin?.src}}">{{consultant.contact.linkedin?.alt}}</a>
+    </div>
+
+
+
+
+</div>

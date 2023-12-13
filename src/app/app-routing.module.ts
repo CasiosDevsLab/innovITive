@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectsComponent } from './projects/projects.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { StudentsComponent } from './students/students.component';
-import { BusinessComponent } from './business/business.component';
-import { LegalComponent } from './legal/legal.component';
-import { SurveyComponent } from './survey/survey.component';
+import { ProjectsComponent } from './component/projects/projects.component';
+import { HomeComponent } from './component/home/home.component';
+import { AboutComponent } from './component/about/about.component';
+import { StudentsComponent } from './component/students/students.component';
+import { BusinessComponent } from './component/business/business.component';
+import { LegalComponent } from './component/legal/legal.component';
+import { SurveyComponent } from './component/survey/survey.component';
+import { AltHomeComponent } from './component/alt-home/alt-home.component';
+import { BusinessCardComponent } from './component/business-card/business-card.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'contact/hiller', component: BusinessCardComponent},
+  { path: 'home', component: AltHomeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'business', component: BusinessComponent },
   { path: 'students', component: StudentsComponent },
@@ -17,7 +20,7 @@ const routes: Routes = [
   { path: 'legal', component: LegalComponent },
   { path: 'survey', component: SurveyComponent },
   { path: '', redirectTo: '/survey', pathMatch: 'full'},
-  {path: '**', redirectTo: '/home'}
+  {path: '**', redirectTo: '/contact/hiller'}
 ];
 
 @NgModule({
