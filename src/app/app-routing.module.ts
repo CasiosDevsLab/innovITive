@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'legal', component: LegalComponent },
   { path: 'survey', component: SurveyComponent },
-  { path: '', redirectTo: '/survey', pathMatch: 'full'},
+  { path: '', redirectTo: '/contact/hiller', pathMatch: 'full'},
   {path: '**', redirectTo: '/contact/hiller'}
 ];
 

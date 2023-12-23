@@ -8,15 +8,23 @@
 
     <h3>Kontakt</h3>
    
-    <div class="mail">
+    <div class="splitview mail">
+            Mail
+        <br>
         <a href="mailto:{{consultant.contact.mail}}"> {{consultant.contact.mail}} </a>
     </div>
 
-    <div class="mobile">
-        {{consultant.contact.mobile}}
+    <div class="mobile splitview">
+        Mobil
+        <br>
+        <a>
+            {{consultant.contact.mobile}}
+        </a>
     </div>
 
-    <div class="linkedIn">
+    <div class="linkedIn splitview">
+        Socials
+        <br>
         <a href="{{consultant.contact.linkedin?.src}}">{{consultant.contact.linkedin?.alt}}</a>
     </div>
 

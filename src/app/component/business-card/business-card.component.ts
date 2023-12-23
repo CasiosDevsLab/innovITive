@@ -17,7 +17,7 @@ export class BusinessCardComponent {
       mail: "Enrik.Hiller@innovITive.de",
       mobile: "+49 176 49450720",
       linkedin: {
-        alt: "Enrik Hiller",
+        alt: "LinkedIn",
         src: "https://www.linkedin.com/in/enrik-hiller-3a2095208/"
       }
     }

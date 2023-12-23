@@ -17,6 +17,7 @@ import { SurveyComponent } from './component/survey/survey.component';
 import { AltHomeComponent } from './component/alt-home/alt-home.component';
 import { ConsultantTeamComponent } from './component/consultant-team/consultant-team.component';
 import { BusinessCardComponent } from './component/business-card/business-card.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BusinessCardComponent } from './component/business-card/business-card.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
