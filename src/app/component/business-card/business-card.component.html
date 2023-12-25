@@ -1,34 +1,54 @@
-<div class="wrapper">
+<section class="wrapper">
 
-    <h1 id="name">
-        {{consultant.firstname}} {{consultant.lastname}}
-    </h1>
+    <div class="bg">
 
-    <img src="../../../assets/imgs/{{consultant.img}}" class="profileimage">
-
-    <h3>Kontakt</h3>
-   
-    <div class="splitview mail">
-            Mail
-        <br>
-        <a href="mailto:{{consultant.contact.mail}}"> {{consultant.contact.mail}} </a>
+        <img src="../../../assets/imgs/{{consultant?.img}}" class="profileimage">
     </div>
 
-    <div class="mobile splitview">
-        Mobil
-        <br>
-        <a>
-            {{consultant.contact.mobile}}
-        </a>
+    <p id="name">
+        {{consultant?.firstname}} {{consultant?.lastname}}
+    </p>
+
+    <p id="role">
+        {{consultant?.role}}
+    <p>
+
+    <div>
+
+        <p class="title" (click)="showExp()">
+            <mat-icon [ngStyle]="{'transform': 'rotate(' + rotationExp + 'deg)'}">chevron_right</mat-icon>
+            Projekterfahrungen
+        </p>
+        <div id="experiences" *ngIf="experiencesOpen">
+
+            <ul *ngFor="let experience of consultant?.experiences">
+                <li>
+                    {{experience.title}}
+                    <br>
+                    {{experience.description}}
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <p class="title" (click)="showContact()">
+            <mat-icon [ngStyle]="{'transform': 'rotate(' + rotationContact + 'deg)'}">chevron_right</mat-icon>
+            Kontakt
+        </p>
+        <div id="contact" *ngIf="contactOpen">
+
+            <ul *ngFor="let experience of consultant?.experiences">
+                <li>
+                    {{experience.title}}
+                    <br>
+                    {{experience.description}}
+                </li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="linkedIn splitview">
-        Socials
-        <br>
-        <a href="{{consultant.contact.linkedin?.src}}">{{consultant.contact.linkedin?.alt}}</a>
-    </div>
 
-
-
-
-</div>
+</section>

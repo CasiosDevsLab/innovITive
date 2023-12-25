@@ -1,41 +1,5 @@
-<article class="title">
-    <section>
-        <h1>Young <br> Professionals <br> IT Consulting.</h1>
-    </section>
-    <section>
-        <h2>
-            Starke Beratungsleistungen.
+<div class="row">
 
-            <br>
+    <app-business-card *ngFor="let current of consultants" [consultant]="current"></app-business-card>
 
-            Geringe Kosten.
-        </h2>
-    </section>
-</article>
-
-<article class="price">
-    IT Beratung
-
-    <br>
-
-    <span>60€/h</span>
-</article>
-
-<button class="primary-btn">Beratung anfragen</button>
-
-
-<article id="consultants">
-    <section *ngFor="let consultant of consultants">
-        <div class="consultantWidget" (mouseover)="showDetails(consultant)">
-            <img src="../../../assets/imgs/{{consultant.img}}">
-        </div>
-    </section>
-</article>
-
-<article *ngIf="current" class="details">
-    <section>
-        <h2>
-            {{current.role}} {{current.firstname}} {{current.lastname}}
-        </h2>
-    </section>
-</article>
+</div>

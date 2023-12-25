@@ -14,10 +14,10 @@ import { AboutComponent } from './component/about/about.component';
 import { LegalComponent } from './component/legal/legal.component';
 import { FloatingBtnComponent } from './component/floating-btn/floating-btn.component';
 import { SurveyComponent } from './component/survey/survey.component';
-import { AltHomeComponent } from './component/alt-home/alt-home.component';
 import { ConsultantTeamComponent } from './component/consultant-team/consultant-team.component';
 import { BusinessCardComponent } from './component/business-card/business-card.component';
 import {MatIconModule} from '@angular/material/icon';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 
 @NgModule({
   declarations: [
@@ -33,14 +33,15 @@ import {MatIconModule} from '@angular/material/icon';
     LegalComponent,
     FloatingBtnComponent,
     SurveyComponent,
-    AltHomeComponent,
     ConsultantTeamComponent,
     BusinessCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    NgxGoogleAnalyticsModule,
+    NgxGoogleAnalyticsModule.forRoot('G-MPTCCHBKHP'),
   ],
   providers: [],
   bootstrap: [AppComponent]

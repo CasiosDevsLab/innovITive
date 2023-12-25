@@ -1,4 +1,4 @@
-<nav *ngIf="router.url != '/survey'">
+<nav>
     <a *ngFor="let element of navigationElements" 
     class="nav-btn"
     routerLink='/{{ element.path }}'

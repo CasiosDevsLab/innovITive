@@ -8,13 +8,90 @@ import { Consultant } from 'src/app/model/consultant';
 })
 export class ConsultantTeamComponent {
 
-  @Input()
-  consultants: Consultant[] = []
+  consultants: Consultant[] = [
+    {
+      firstname: "Enrik",
+      lastname: "Hiller",
+      img: "enrikhiller.png",
+      role: "Consultant",
+      experiences: [{
+        title: "Projekt Z",
+        description: "Lorem ipsum set dolor et amat."
+      },
+      {
+        title: "Projekt Z",
+        description: "Lorem ipsum set dolor et amat."
+      }],
+      contact: {
+        mail: "Enrik.Hiller@innovITive.de",
+        mobile: "+49 176 49450720",
+        linkedin: {
+          alt: "LinkedIn",
+          src: "https://www.linkedin.com/in/enrik-hiller-3a2095208/"
+        }
+      }
+    },
 
-  current?: Consultant = this.consultants[0]
 
-  showDetails(consultant: Consultant) {
-    this.current = consultant
-  }
+
+    {
+      firstname: "Lennart",
+      lastname: "Behrendt",
+      img: "lennartbehrendt.png",
+      role: "Consultant",
+      experiences: [{
+        title: "Projekt 23",
+        description: "Lorem ipsum set dolor et amat."
+      }],
+      contact: {
+        mail: "Lennart.Behrendt@innovITive.de",
+        mobile: "+49 151 345234124",
+        linkedin: {
+          alt: "LinkedIn",
+          src: ""
+        }
+      }
+    },
+
+
+
+    {
+      firstname: "Enrik",
+      lastname: "Hiller",
+      img: "enrikhiller.png",
+      role: "Consultant",
+      experiences: [{
+        title: "Proejkt X",
+        description: "Lorem ipsum set dolor et amat."
+      }],
+      contact: {
+        mail: "Enrik.Hiller@innovITive.de",
+        mobile: "+49 176 49450720",
+        linkedin: {
+          alt: "LinkedIn",
+          src: "https://www.linkedin.com/in/enrik-hiller-3a2095208/"
+        }
+      }
+    },
+    {
+      firstname: "Enrik",
+      lastname: "Hiller",
+      img: "enrikhiller.png",
+      role: "Consultant",
+      experiences: [{
+        title: "Projekt 1",
+        description: "Lorem ipsum set dolor et amat."
+      }],
+      contact: {
+        mail: "Enrik.Hiller@innovITive.de",
+        mobile: "+49 176 49450720",
+        linkedin: {
+          alt: "LinkedIn",
+          src: "https://www.linkedin.com/in/enrik-hiller-3a2095208/"
+        }
+      }
+    }
+  ]
+
 
 }
