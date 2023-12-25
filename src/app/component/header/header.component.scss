@@ -30,11 +30,22 @@ header {
             right: 0px;
         }
     }
+
+    transition: all 300ms;
+
 }
 
 @media screen and (max-width: $mobile) {
 
     header {
+        flex-flow: column;
+        height: auto;
+    }
+
+    .hide {
+        transition: all 300ms;
+        height: 4rem;
+
         overflow: hidden;
     }
 

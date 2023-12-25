@@ -7,6 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  opened = false;
+
   constructor(public router: Router) {}
 
+  toggleMenu() {
+    if (this.opened) {
+      document.getElementById("header")?.classList.add("hide")
+    } else {
+      document.getElementById("header")?.classList.remove("hide")
+    }
+
+    
+    this.opened = !this.opened
+  }
 }

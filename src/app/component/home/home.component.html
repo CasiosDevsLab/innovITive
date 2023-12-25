@@ -1,29 +1,3 @@
-<div class="background-container">
+<app-bg-floating-text [button]="headerButton" [description]="headerDesc" [title]="headerTitle"></app-bg-floating-text>
 
-    <div class="toplevel-container">
-        <h1>Anfragen</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,
-            magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna</p>
-        <button class="primary-btn floating">Jetzt anfragen</button>
-    </div>
-
-
-    <div id="home-skeleton" class="background loading"></div>
-    <img class="background" src="./assets/imgs/home-background1.jpg" alt="elbphilharmonie hamburg"
-        (load)="removeLoading()">
-
-
-
-</div>
-
-
-
-<section>
-    <article *ngFor="let article of articles">
-        <h3>{{article.header}}</h3>
-        <p>{{article.description}}</p>
-        <div>
-            <button (click)='navigateTo(article.path)' class="textlink">{{article.cta}}</button>
-        </div>
-    </article>
-</section>
+<app-articles-btn [articles]="articles"></app-articles-btn>

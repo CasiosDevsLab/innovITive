@@ -1,8 +1,9 @@
 <nav>
-    <a *ngFor="let element of navigationElements" 
-    class="nav-btn"
-    routerLink='/{{ element.path }}'
-    routerLinkActive="active">
+    <a *ngFor="let element of navigationElements" class="nav-btn" routerLink='/{{ element.path }}'
+        routerLinkActive="active">
         {{ element.name }}
     </a>
+
 </nav>
+
+

@@ -9,16 +9,15 @@ import { LegalComponent } from './component/legal/legal.component';
 import { SurveyComponent } from './component/survey/survey.component';
 import { BusinessCardComponent } from './component/business-card/business-card.component';
 import { ConsultantTeamComponent } from './component/consultant-team/consultant-team.component';
+import { ReferencesComponent } from './component/references/references.component';
+import { ServicesComponent } from './component/services/services.component';
 
 const routes: Routes = [
-  { path: 'contact', component: ConsultantTeamComponent},
   { path: 'home', component: HomeComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'business', component: BusinessComponent },
-  { path: 'students', component: StudentsComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ConsultantTeamComponent},
+  { path: 'references', component:  ReferencesComponent},
+  { path: 'services', component:  ServicesComponent},
   { path: 'legal', component: LegalComponent },
-  { path: 'survey', component: SurveyComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', redirectTo: '/home'}
 ];

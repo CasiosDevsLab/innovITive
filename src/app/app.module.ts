@@ -18,6 +18,10 @@ import { ConsultantTeamComponent } from './component/consultant-team/consultant-
 import { BusinessCardComponent } from './component/business-card/business-card.component';
 import {MatIconModule} from '@angular/material/icon';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { BgFloatingTextComponent } from './component/bg-floating-text/bg-floating-text.component';
+import { ArticlesBtnComponent } from './component/articles-btn/articles-btn.component';
+import { ServicesComponent } from './component/services/services.component';
+import { ReferencesComponent } from './component/references/references.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-go
     FloatingBtnComponent,
     SurveyComponent,
     ConsultantTeamComponent,
-    BusinessCardComponent
+    BusinessCardComponent,
+    BgFloatingTextComponent,
+    ArticlesBtnComponent,
+    ServicesComponent,
+    ReferencesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Article } from 'src/app/model/article';
+import { Button } from 'src/app/model/button';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +10,35 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 
-  articles: Array<any> = [
+
+  headerButton: Button = {
+    text: "Jetzt anfragen",
+    action: () => alert("Button funktioniert")
+  }
+
+  headerTitle: string = "Anfrage"
+  headerDesc: string = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna"
+
+
+
+  articles: Article[] = [
     {
-      header: "Überschrift 1",
+      img: "test.jpg",
+      title: "Überschrift 1",
       description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
       path: "/projects",
       cta: "Erfahre mehr"
     },
     {
-      header: "Überschrift 2",
+      img: "test2.jpg",
+      title: "Überschrift 2",
       description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
       path: "/projects",
       cta: "Erfahre mehr"
     },
     {
-      header: "Überschrift 3",
+      img: "test3.jpg",
+      title: "Überschrift 3",
       description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
       path: "/projects",
       cta: "Erfahre mehr"
@@ -30,17 +46,5 @@ export class HomeComponent {
 
   ]
 
-
-  constructor(private router: Router) { }
-
-  navigateTo(path: any) {
-    this.router.navigateByUrl(path)
-  }
-
-  removeLoading() {
-    let div = document.querySelector('#home-skeleton');
-    div?.classList.remove("loading")
-    div?.classList.remove("background")
-  }
 
 }
