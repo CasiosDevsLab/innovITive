@@ -25,6 +25,13 @@ header {
 
     background-color: rgba(255, 255, 255, 0.905);
 
+    position: fixed;
+    top: 0;
+
+    mat-icon {
+        display: none;
+    }
+
     app-navigation {
         &:last-child {
             right: 0px;
@@ -40,6 +47,29 @@ header {
     header {
         flex-flow: column;
         height: auto;
+
+        mat-icon {
+            display: block;
+        }
+
+        div {
+            display: flex;
+            flex-flow: row;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            mat-icon {
+                padding: 1rem;
+                height: 2rem;
+            }
+        }
+
+        :first-child {
+            align-self: flex-start;
+        }
+
+
     }
 
     .hide {

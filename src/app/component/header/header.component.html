@@ -1,10 +1,15 @@
-<header id="header" (click)="toggleMenu()">
+<header id="header" class="hide">
 
-    <a 
-    routerLink='/home'
-    routerLinkActive="active" >
-        <img src="./assets/imgs/logo.png" alt="logo">
-    </a>
-    
+    <div>
+        <a routerLink='/home' routerLinkActive="active">
+            <img src="./assets/imgs/logo.png" alt="logo">
+        </a>
+
+        <mat-icon (click)="toggleMenu()">
+            menu
+        </mat-icon>
+    </div>
+
+
     <app-navigation></app-navigation>
 </header>

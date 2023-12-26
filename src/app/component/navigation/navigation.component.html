@@ -1,6 +1,7 @@
 <nav>
     <a *ngFor="let element of navigationElements" class="nav-btn" routerLink='/{{ element.path }}'
-        routerLinkActive="active">
+        routerLinkActive="active"
+        (click)="closeMenu()">
         {{ element.name }}
     </a>
 

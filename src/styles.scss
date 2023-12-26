@@ -164,6 +164,10 @@ body {
 
 }
 
+router-outlet {
+    margin-top: 3rem;
+}
+
 @keyframes loading-animation {
     0% {
         background-color: rgba(32, 74, 213, 0.322);

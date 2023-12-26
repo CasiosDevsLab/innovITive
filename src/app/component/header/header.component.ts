@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-header',
@@ -8,18 +9,24 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  opened = false;
+  static opened = false;
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) {
+    HeaderComponent.opened = false;
+    document.getElementById("header")?.classList.add("hide")
+  }
 
   toggleMenu() {
-    if (this.opened) {
+    if (HeaderComponent.opened) {
       document.getElementById("header")?.classList.add("hide")
     } else {
       document.getElementById("header")?.classList.remove("hide")
     }
+    HeaderComponent.opened = !HeaderComponent.opened
+    console.log(HeaderComponent.opened)
+  }
 
-    
-    this.opened = !this.opened
+  opened() {
+    return HeaderComponent.opened;
   }
 }

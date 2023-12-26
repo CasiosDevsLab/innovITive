@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavElement } from 'src/app/model/navElement';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-navigation',
@@ -8,6 +9,7 @@ import { NavElement } from 'src/app/model/navElement';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+
 
   navigationElements: NavElement[] = [
     {
@@ -30,5 +32,9 @@ export class NavigationComponent {
 
   constructor(public router: Router) { }
 
+  closeMenu() {
+    document.getElementById("header")?.classList.add("hide")
+    HeaderComponent.opened = false
+  }
 
 }
