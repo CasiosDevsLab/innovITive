@@ -1,0 +1,31 @@
+<div class="background-container">
+    <div class="toplevel-container">
+        <h1>Datenschutz & Impressum </h1>
+    </div>
+    
+    <div id="home-skeleton" class="background loading"></div>
+    <img class="background" src="./assets/imgs/legal-background.jpg" alt="elbphilharmonie hamburg" (load)="removeLoading()">
+
+</div>
+
+
+<section class="legal">
+    <article>
+        <h2>Impressum</h2>
+        <div class="card" *ngFor="let content of impressum.contents">
+            <b>{{content.header}}</b>
+            <p>{{content.value}}</p>
+        </div>
+    </article>
+    <article>
+        <h2>{{impressum.name}}</h2>
+        <b>{{impressum.basedOn}}</b>
+
+        <p>{{impressum.adresse.strasse}}</p>
+        <p>{{impressum.adresse.plz}}, {{impressum.adresse.ort}}</p>
+        <p>{{impressum.adresse.land}}</p>
+    
+        <p>E-Mail: {{impressum.mail}}</p>
+        <p>Internet: https://innovITve.de</p>
+    </article>
+</section>

@@ -1,0 +1,103 @@
+.wrapper {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: center;
+
+    padding-top: 10vh;
+
+    width: calc(100vw/4);
+    height: 90vh;
+
+    .profileimage {
+        width: 200px;
+        height: 200px;
+
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .bg {
+        display: flex;
+
+        flex-flow: column;
+
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        background: linear-gradient(45deg, #E5D5FF, #D6F0FF, #D2ECFF);
+
+        width: 200px;
+        height: 200px;
+
+        
+    }
+
+    #name {
+        font-weight: normal;
+        margin-top: 3rem;
+    }
+
+    p {
+        font-weight: lighter;
+    }
+
+    .title {
+        z-index: 100;
+        display: flex;
+
+        flex-flow: row;
+
+        align-items: center;
+
+        cursor: pointer;
+        padding: 1rem;
+        width: calc(90vw/4);
+
+        mat-icon {
+            padding: 0rem 1rem;
+        }
+
+        &:hover {
+            transition: all 500ms;
+            background-color: #d2ecff79;
+            animation: blow 5s linear infinite;
+        }
+    }
+
+    .experiences {
+        li {
+            list-style: none;
+        }
+    }
+
+    mat-icon {
+        transition: 300ms;
+    }
+
+
+    transition: all 500ms;
+
+
+
+    @keyframes blow {
+        0% {
+            background-color: #d2ecff2f;
+        }
+
+        33% {
+            background-color: #d6f0ff27;
+        }
+
+        66% {
+            background-color: #e5d5ff29;
+        }
+
+        100% {
+            background-color: #d2ecff2f;
+        }
+    }
+
+}

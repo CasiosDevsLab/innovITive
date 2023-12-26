@@ -1,0 +1,48 @@
+@import './../../../styles.scss';
+
+
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+
+    list-style-type: none;
+
+    
+
+    align-items: center;
+
+    a {
+
+        height: 4rem;
+
+        padding: 0rem 2rem;
+        text-decoration: none;
+
+        color: $text-dark;
+
+        display: grid;
+        align-content: center;
+        
+        transition: all 250ms;
+
+        &.active {
+            color: $primary-light;
+            transition: all 500ms;
+        }
+
+        &:hover {
+            background-color: $secondary-light;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+
+nav {
+    flex-flow: column;
+}
+    
+}

@@ -1,0 +1,23 @@
+.floating {
+    position: fixed;
+    float: right;
+    right: 2rem;
+    bottom: 2rem;
+
+    width: 2rem;
+    height: 4rem;
+
+    box-shadow: none;
+    border-radius: 1rem;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    /* From https://css.glass */
+    background: rgba(26, 74, 232, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+}

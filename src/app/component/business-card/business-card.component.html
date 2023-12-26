@@ -1,0 +1,54 @@
+<section class="wrapper">
+
+    <div class="bg">
+
+        <img src="../../../assets/imgs/{{consultant?.img}}" class="profileimage">
+    </div>
+
+    <p id="name">
+        {{consultant?.firstname}} {{consultant?.lastname}}
+    </p>
+
+    <p id="role">
+        {{consultant?.role}}
+    <p>
+
+    <div>
+
+        <p class="title" (click)="showExp()">
+            <mat-icon [ngStyle]="{'transform': 'rotate(' + rotationExp + 'deg)'}">chevron_right</mat-icon>
+            Projekterfahrungen
+        </p>
+        <div id="experiences" *ngIf="experiencesOpen">
+
+            <ul *ngFor="let experience of consultant?.experiences">
+                <li>
+                    {{experience.title}}
+                    <br>
+                    {{experience.description}}
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <p class="title" (click)="showContact()">
+            <mat-icon [ngStyle]="{'transform': 'rotate(' + rotationContact + 'deg)'}">chevron_right</mat-icon>
+            Kontakt
+        </p>
+        <div id="contact" *ngIf="contactOpen">
+
+            <ul *ngFor="let experience of consultant?.experiences">
+                <li>
+                    {{experience.title}}
+                    <br>
+                    {{experience.description}}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</section>
