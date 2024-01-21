@@ -1,0 +1,29 @@
+<div class="container">
+
+    <h1 class="header">
+        Young Professionals
+    </h1>
+    
+    
+    <div class="x mandatory-scroll-snapping" dir="ltr">
+        
+        
+        
+        <div class="splitviewl" *ngFor="let article of articles">
+            
+            <div class="column">
+                <h4>{{article.subtitle}}</h4>
+                <h1>{{article.title}}</h1>
+                <p>{{article.description}}</p>
+                <button class="primary-btn" (click)="button.call(article.btn?.action)">{{article.btn?.text}}</button>
+            </div>
+            
+            <div class="column">
+                <img src="../../../assets/imgs/{{article.img}}" alt="Sliding Image" class="profilepicture"
+                id="slideInImage">
+            </div>
+            
+        </div>
+        
+    </div>
+</div>

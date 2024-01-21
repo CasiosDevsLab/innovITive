@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -20,13 +19,10 @@ $innovITve-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$innovITve-theme: mat.define-light-theme((
-  color: (
-    primary: $innovITve-primary,
-    accent: $innovITve-accent,
-    warn: $innovITve-warn,
-  )
-));
+$innovITve-theme: mat.define-light-theme((color: (primary: $innovITve-primary,
+                accent: $innovITve-accent,
+                warn: $innovITve-warn,
+            )));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -99,45 +95,63 @@ body {
 
 .primary-btn {
 
-    max-width: fit-content;
     padding: 1rem 2rem;
+    background-color: #ffffff;
+    /* White background */
+    color: #0a0a0a;
+    /* Dark text color */
     border: none;
-    border-radius: 2rem;
-    color: $text-light;
-
-    font-size: 16px;
-
-    background: rgba(32, 74, 213, 0.322);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.8px);
-    -webkit-backdrop-filter: blur(5.8px);
-
-    transition: all 250ms;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    /* This should match your website's font */
+    width: fit-content;
 
     &:hover {
-        box-shadow: none;
-        cursor: pointer;
-        transition: all 500ms;
+        background-color: #f2f2f2;
+        /* Slightly darker on hover */
+        transform: translateY(-2px);
     }
 
+    &:active {
+        background-color: #e6e6e6;
+        /* Even darker when active */
+        transform: translateY(1px);
+    }
 }
 
+
 .secondary-btn {
-    max-width: fit-content;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 2rem;
+    padding: 1rem 2rem;
+    background-color: #eeeeee00;
+    /* White background */
     color: $text-light;
-    background-color: $secondary-light;
-    box-shadow: none;
-    transition: all 250ms;
+    /* Dark text color */
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    /* This should match your website's font */
+    width: fit-content;
 
     &:hover {
-        background-color: $primary-light;
-        box-shadow: 2px 2px 2px rgba(156, 156, 156, 0.477);
-        cursor: pointer;
-        transition: all 250ms;
+        background-color: #f2f2f2;
+        /* Slightly darker on hover */
+        transform: translateY(-2px);
+        color: black;
+    }
+
+    &:active {
+        background-color: #e6e6e6;
+        /* Even darker when active */
+        transform: translateY(1px);
     }
 }
 
@@ -157,27 +171,20 @@ body {
     }
 }
 
-.loading {
 
-    opacity: 0.6;
-    animation: loading-animation 1s linear infinite alternate;
 
+html,
+body {
+    height: 100%;
 }
 
-router-outlet {
-    margin-top: 3rem;
+body {
+    margin: 0;
+    font-family: Inter, "Inter", sans-serif;
+
+    background-image: 
+    linear-gradient(90deg, rgba(47, 47, 47, 0.444) 5%, rgba(20, 20, 20, 0.341) 30%, rgba(33, 33, 33, 0.282) 50%, rgba(26, 26, 26, 0.146) 70%, rgba(50, 50, 50, 0) 100%),
+    url('../assets/imgs/home-background.jpg');
+    
 }
 
-@keyframes loading-animation {
-    0% {
-        background-color: rgba(32, 74, 213, 0.322);
-    }
-
-    100% {
-        background-color: rgba(210, 221, 255, 0.322);
-    }
-}
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

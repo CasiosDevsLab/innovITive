@@ -1,16 +1,12 @@
-<div class="background-container">
+<div class="background-container" *ngIf="article">
 
     <div class="toplevel-container">
-        <h1 *ngIf="title">{{title}}</h1>
-        <p *ngIf="description">{{description}}</p>
-        <button *ngIf="button" class="primary-btn floating" (click)="call(button.action)">{{button.text}}</button>
+        <h1 *ngIf="article.title">{{article.title}}</h1>
+        <p *ngIf="article.description">{{article.description}}</p>
+        <button *ngIf="article.btn" class="primary-btn floating" (click)="call(article.btn.action)">{{article.btn.text}}</button>
     </div>
 
 
-    <div id="home-skeleton" class="background loading"></div>
-    <img class="background" src="./assets/imgs/home-background1.jpg" alt="elbphilharmonie hamburg"
-        (load)="removeLoading()">
-
-
+    <img class="background" src="../../../assets/imgs/{{article.img}}" alt="">
 
 </div>

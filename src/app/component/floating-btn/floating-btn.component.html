@@ -1,1 +1,1 @@
-<button class="primary-btn floating" *ngIf="router.url != '/survey'"></button>
+<button class="primary-btn floating" (click)="call(button?.action)"> <mat-icon>arrow_upward</mat-icon> </button>

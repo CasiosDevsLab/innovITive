@@ -22,6 +22,9 @@ import { BgFloatingTextComponent } from './component/bg-floating-text/bg-floatin
 import { ArticlesBtnComponent } from './component/articles-btn/articles-btn.component';
 import { ServicesComponent } from './component/services/services.component';
 import { ReferencesComponent } from './component/references/references.component';
+import { SplitviewTextImageComponent } from './component/splitview-text-image/splitview-text-image.component';
+import { HorizontalScrollComponent } from './component/horizontal-scroll/horizontal-scroll.component';
+import { NgOptimizedImage } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { ReferencesComponent } from './component/references/references.component
     BgFloatingTextComponent,
     ArticlesBtnComponent,
     ServicesComponent,
-    ReferencesComponent
+    ReferencesComponent,
+    SplitviewTextImageComponent,
+    HorizontalScrollComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import { ReferencesComponent } from './component/references/references.component
     MatIconModule,
     NgxGoogleAnalyticsModule,
     NgxGoogleAnalyticsModule.forRoot('G-MPTCCHBKHP'),
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

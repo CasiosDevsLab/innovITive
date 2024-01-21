@@ -14,9 +14,6 @@ import { ServicesComponent } from './component/services/services.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'contact', component: ConsultantTeamComponent},
-  { path: 'references', component:  ReferencesComponent},
-  { path: 'services', component:  ServicesComponent},
   { path: 'legal', component: LegalComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', redirectTo: '/home'}

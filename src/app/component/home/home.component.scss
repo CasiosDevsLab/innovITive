@@ -1,0 +1,16 @@
+@import './../../../styles.scss';
+
+
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+
+.container div {
+  scroll-snap-align: center;
+}
+
+.container {
+  overflow-y: scroll; /* or overflow-y: auto; */
+  height: 100vh; /* Adjust as needed */
+}
+

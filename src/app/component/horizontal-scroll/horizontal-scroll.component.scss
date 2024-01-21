@@ -1,0 +1,97 @@
+@import './../../../styles.scss';
+
+
+.splitviewl {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    flex-shrink: 0; // make sure elements does not get smaller than 80% screen-width
+    scroll-snap-align: start;
+
+    color: white;
+
+    .column {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        justify-self: flex-start;
+        padding-left: 3rem;
+
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+.x.mandatory-scroll-snapping {
+    display: flex;
+
+    overflow-x: scroll;
+
+    position: relative;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 80vh;
+}
+
+.container {
+    height: 100vh;
+    scroll-snap-align: center;
+
+}
+
+.profilepicture {
+    border-radius: 200%;
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+    background: white;
+    align-self: center;
+}
+
+.header {
+    height: 20vh;
+    font-size: 70px;
+    padding-left: 3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: end;
+    margin: 0%;
+    color: white;
+}
+
+
+@media screen and (max-width: $mobile) {
+
+    .header {
+        font-size: 50px;
+    }
+
+    .splitviewl {
+        display: flex;
+        flex-flow: column;
+        scroll-snap-align: start;
+
+        .column {
+            width: 90%;
+
+            img {
+                display: none;
+            }
+            
+            
+        }
+
+        &:last-child {
+            margin-right: 10rem;
+        }
+
+    }
+
+    .x.mandatory-scroll-snapping {
+        align-items: center;
+    }
+
+}

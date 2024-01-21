@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { Article } from 'src/app/model/article';
-import { Button } from 'src/app/model/button';
 
 @Component({
   selector: 'app-home',
@@ -10,41 +8,81 @@ import { Button } from 'src/app/model/button';
 })
 export class HomeComponent {
 
-
-  headerButton: Button = {
-    text: "Jetzt anfragen",
-    action: () => alert("Button funktioniert")
+  headerArticle: Article = {
+    title: "Ethical AI innovation",
+    description: "Ihre KI-Ethik Beratung mit Expertise. Wir sind Ihr Partner für den ethischen Einsatz von KI.",
+    img: "lightbulb_hands.jpg",
+    btn: {
+      text: "Jetzt anfragen",
+      action: () => alert("Button funktioniert")
+    }
   }
 
-  headerTitle: string = "Anfrage"
-  headerDesc: string = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna"
+  unserAngebot: Article[] = [{
+    title: "Ethical Moving Forward",
+    subtitle: "Unser Angebot",
+    description: "innovITive möchte sicherzustellen, dass ihre neuen Technologien, Produkte und Dienstleistungen im Einklang mit moralischen Werten, sozialer Verantwortung und Nachhaltigkeit stehen. Hierfür unterstützen wir sie bei dem Aufbau eines individuellen Rahmenwerks zum Einsatz von KI, da eine langrfristige Ausrichtung der Bemühungen zu KI notwendig sind. Wir lassen den Blick nicht von unseren Teamkameraden und behalten auch das Nachbarboot im Auge. ",
+    img: "team.jpg",
+    btn: {
+      text: "Erfahre mehr",
+      action: () => alert("Button funktioniert")
+    }
+  }]
 
-
-
-  articles: Article[] = [
+  consultants: Article[] = [
     {
-      img: "test.jpg",
-      title: "Überschrift 1",
-      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
-      path: "/projects",
-      cta: "Erfahre mehr"
+      subtitle: "Consultant",
+      title: "Lennart Behrendt",
+      description: "innovITive möchte sicherzustellen, dass ihre neuen Technologien, Produkte und Dienstleistungen im Einklang mit moralischen Werten, sozialer Verantwortung und Nachhaltigkeit stehen. Hierfür unterstützen wir sie bei dem Aufbau eines individuellen Rahmenwerks zum Einsatz von KI, da eine langrfristige Ausrichtung der Bemühungen zu KI notwendig sind. Wir lassen den Blick nicht von unseren Teamkameraden und behalten auch das Nachbarboot im Auge.",
+      img: "lennartbehrendt.png",
+      btn: {
+        text: "Erfahre mehr",
+        action: () => alert("Button funktioniert")
+      }
     },
     {
-      img: "test2.jpg",
-      title: "Überschrift 2",
-      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
-      path: "/projects",
-      cta: "Erfahre mehr"
+      subtitle: "Consultant",
+      title: "Enrik Hiller",
+      description: "innovITive möchte sicherzustellen, dass ihre neuen Technologien, Produkte und Dienstleistungen im Einklang mit moralischen Werten, sozialer Verantwortung und Nachhaltigkeit stehen. Hierfür unterstützen wir sie bei dem Aufbau eines individuellen Rahmenwerks zum Einsatz von KI, da eine langrfristige Ausrichtung der Bemühungen zu KI notwendig sind. Wir lassen den Blick nicht von unseren Teamkameraden und behalten auch das Nachbarboot im Auge.",
+      img: "enrikhiller.png",
+      btn: {
+        text: "Erfahre mehr",
+        action: () => alert("Button funktioniert")
+      }
     },
     {
-      img: "test3.jpg",
-      title: "Überschrift 3",
-      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
-      path: "/projects",
-      cta: "Erfahre mehr"
+      subtitle: "Consultant",
+      title: "Armin Hiller",
+      description: "innovITive möchte sicherzustellen, dass ihre neuen Technologien, Produkte und Dienstleistungen im Einklang mit moralischen Werten, sozialer Verantwortung und Nachhaltigkeit stehen. Hierfür unterstützen wir sie bei dem Aufbau eines individuellen Rahmenwerks zum Einsatz von KI, da eine langrfristige Ausrichtung der Bemühungen zu KI notwendig sind. Wir lassen den Blick nicht von unseren Teamkameraden und behalten auch das Nachbarboot im Auge.",
+      img: "enrikhiller.png",
+      btn: {
+        text: "Erfahre mehr",
+        action: () => alert("Button funktioniert")
+      }
+    },
+    {
+      subtitle: "Consultant",
+      title: "Enrik Hiller",
+      description: "innovITive möchte sicherzustellen, dass ihre neuen Technologien, Produkte und Dienstleistungen im Einklang mit moralischen Werten, sozialer Verantwortung und Nachhaltigkeit stehen. Hierfür unterstützen wir sie bei dem Aufbau eines individuellen Rahmenwerks zum Einsatz von KI, da eine langrfristige Ausrichtung der Bemühungen zu KI notwendig sind. Wir lassen den Blick nicht von unseren Teamkameraden und behalten auch das Nachbarboot im Auge.",
+      img: "enrikhiller.png",
+      btn: {
+        text: "Erfahre mehr",
+        action: () => alert("Button Enrik Hiller funktioniert")
+      }
+    }
+  ]
+
+  contactArticle: Article = {
+
+    title: "Kontakt",
+    description: "Bei Fragen zu unserer Dienstleistung, kontaktieren Sie uns jederzeit gerne persönlich. Schreiben Sie uns eine E-Mail oder lassen Sie uns über LinkedIn in Kontakt treten. Wir freuen uns darauf von Ihnen zu hören!",
+    img: "contact-home.jpg",
+    btn: {
+      text: "Nehmen Sie Kontakt auf",
+      action: () => alert("Button funktioniert")
     }
 
-  ]
+  }
 
 
 }

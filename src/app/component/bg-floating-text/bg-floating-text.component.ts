@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Article } from 'src/app/model/article';
 import { Button } from 'src/app/model/button';
 
 @Component({
@@ -9,21 +10,7 @@ import { Button } from 'src/app/model/button';
 export class BgFloatingTextComponent {
 
   @Input()
-  button?: Button;
-  
-  @Input()
-  title?: string;
-
-  @Input()
-  description?: string; 
-
-
-
-  removeLoading() {
-    let div = document.querySelector('#home-skeleton');
-    div?.classList.remove("loading")
-    div?.classList.remove("background")
-  }
+  article: Article | undefined;
 
   call(arg0: () => void) {
     arg0.call(this);

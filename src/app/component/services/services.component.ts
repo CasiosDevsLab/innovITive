@@ -12,20 +12,14 @@ export class ServicesComponent {
     {
       title: "Überschrift 1",
       description: "Beschreibung für den Artikelnummer 1",
-      path: "/home",
-      cta: "Mehr erfahren"
     },
     {
       title: "Überschrift 2",
       description: "Beschreibung für den Artikelnummer 2",
-      path: "/home",
-      cta: "Mehr erfahren"
     },
     {
       title: "Überschrift 2",
       description: "Beschreibung für den Artikelnummer 2",
-      path: "/home",
-      cta: "Mehr erfahren"
     }
 ]
 }

@@ -1,0 +1,57 @@
+@import './../../../styles.scss';
+
+
+.splitview {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    scroll-snap-align: center;
+    background-color: #001431;
+}
+
+.column {
+    display: flex;
+    flex-flow: column;
+    color: white;
+    width: 70%;
+    justify-self: center;
+    text-align: justify;
+    justify-content: center;
+
+    h1 {
+        text-align: left;
+        margin: 0;
+        font-size: 70px;
+        font-weight: 500;
+    }
+
+    p {
+        padding: 2rem 0rem;
+    }
+
+    img {
+        max-height: 70vh;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+
+    .splitview {
+        grid-template-columns: 1fr;
+    }
+
+
+    img {
+        display: none;
+    }
+
+    .column {
+
+
+        h1 {
+            font-size: 50px;
+
+        }
+    }
+}

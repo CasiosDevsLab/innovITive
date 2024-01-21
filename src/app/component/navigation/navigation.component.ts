@@ -17,14 +17,6 @@ export class NavigationComponent {
       path: "/home",
     },
     {
-      name: "Referenzen",
-      path: "/references"
-    },
-    {
-      name: "Leistungen",
-      path: "/services"
-    },
-    {
       name: "Kontakt",
       path: "/contact"
     }

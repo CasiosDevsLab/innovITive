@@ -1,7 +1,9 @@
+import { Button } from "./button";
+
 export interface Article {
     title: string;
+    subtitle?: string;
     description: string;
-    path: string;
-    cta: string;
     img?: string
+    btn?: Button;
 }
